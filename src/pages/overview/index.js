@@ -28,11 +28,12 @@ const Overview = () => {
 
   return (
     <div style={{ width: "910px", margin: "80px calc(50vw - 405px)" }}>
-      <h1 className="text-4xl	font-bold">Contractors</h1>
+      <h1 className="text-4xl	font-bold mb-2">Contractors</h1>
       <h5 className="text-sm">
         Lorem ipsum dolor sit amet consectetur. Lacus semper convallis non et
         vel nec sit proin.
       </h5>
+      <br />
       <br />
       <div style={{ boxShadow: "0px 50px 100px 0px rgba(0, 0, 0, 0.1)" }}>
         <Row className="p-4 w-full">
