@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import { Layout } from "antd";
 import HeaderCompoent from "../../components/header";
 import NavigationComponent from "../../components/navigation";
-import "./index.css";
 
 const MainLayout = () => {
   return (

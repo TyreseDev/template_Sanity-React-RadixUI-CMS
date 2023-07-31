@@ -1,0 +1,28 @@
+.main-table .ant-table-row-selected > .ant-table-cell {
+  background: #377fe9 !important;
+  color: white;
+}
+
+.main-table .ant-table-row > .ant-table-cell > div > .ant-tag {
+  background-color: #f3f3f3;
+  border: 0;
+  cursor: pointer;
+}
+
+.main-table .ant-table-row-selected > .ant-table-cell > div > .ant-tag {
+  color: white;
+  background-color: #4e8fee;
+}
+
+.selected-row-popover.ant-tag {
+  color: white;
+  background-color: #4e8fee;
+  border: 0;
+  cursor: pointer;
+}
+
+.unselected-row-popover.ant-tag {
+  background-color: #f3f3f3;
+  border: 0;
+  cursor: pointer;
+}

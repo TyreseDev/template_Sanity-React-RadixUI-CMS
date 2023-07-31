@@ -5,6 +5,7 @@ import Tasks from "./pages/tasks";
 import Projects from "./pages/projects";
 import Payments from "./pages/payments";
 import Users from "./pages/users";
+import { client } from "./client";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,18 @@ const router = createBrowserRouter([
         index: true,
         path: "/overview",
         element: <Overview />,
-        // loader: teamLoader,
+        loader: async () => {
+          const query = `*[_type == "item"]{
+            key,
+            name,
+            specialties[]->{
+              specialty
+            },
+            rate,
+            availability
+          }`;
+          return client.fetch(query);
+        },
       },
       {
         index: true,
