@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Button, Col, Input, Row, Tooltip } from "antd";
-import { SearchOutlined, ControlOutlined } from "@ant-design/icons";
+import { SearchOutlined } from "@ant-design/icons";
 import TableComponent from "./components/table";
+import FilterButtonIcon from "../../assets/img/filter-button.png";
 
 const Overview = () => {
   const data = useLoaderData();
@@ -27,7 +28,7 @@ const Overview = () => {
   }, [searchKeyWord, setTableData]);
 
   return (
-    <div style={{ width: "910px", margin: "80px calc(50vw - 405px)" }}>
+    <div className="w-[910px] my-20 mx-auto">
       <h1 className="text-4xl	font-bold mb-2">Contractors</h1>
       <h5 className="text-sm">
         Lorem ipsum dolor sit amet consectetur. Lacus semper convallis non et
@@ -35,7 +36,7 @@ const Overview = () => {
       </h5>
       <br />
       <br />
-      <div style={{ boxShadow: "0px 50px 100px 0px rgba(0, 0, 0, 0.1)" }}>
+      <div className="shadow-2xl">
         <Row className="p-4 w-full">
           <Col span={20}>
             <Input
@@ -48,11 +49,13 @@ const Overview = () => {
           </Col>
           <Col span={4}>
             <Tooltip content="Logout">
-              <Button className="flex h-12 text-center float-right px-8">
-                <p className="mt-1.5 text-base">Filters&nbsp;</p>
-                <p>
-                  <ControlOutlined className="mt-1 text-base" />
-                </p>
+              <Button className="flex h-12 float-right px-8">
+                <p className="mt-2 text-base">Filters&nbsp;&nbsp;</p>
+                <img
+                  className="mt-3 w-4 h-4"
+                  src={FilterButtonIcon}
+                  alt="filter button"
+                />
               </Button>
             </Tooltip>
           </Col>

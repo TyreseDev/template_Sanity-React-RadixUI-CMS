@@ -15,10 +15,10 @@ const HeaderRightComponent = () => {
       key: "1",
       label: (
         <Tooltip content="User Settings" className="flex">
-          <p>
+          <p className="mt-[-3px]">
             <SettingOutlined className="text-base" />
           </p>
-          <p className="mt-1">&nbsp;User Settings</p>
+          <p>&nbsp;User Settings</p>
         </Tooltip>
       ),
     },
@@ -26,10 +26,10 @@ const HeaderRightComponent = () => {
       key: "2",
       label: (
         <Tooltip content="Logout" className="flex">
-          <p>
+          <p className="mt-[-3px]">
             <LogoutOutlined className="text-base" />
           </p>
-          <p className="mt-1">&nbsp;Logout</p>
+          <p>&nbsp;Logout</p>
         </Tooltip>
       ),
     },
@@ -55,13 +55,13 @@ const HeaderRightComponent = () => {
           />
         }
       />
-      <div className="h-6 mx-2 my-0">
+      <div className="mx-2 mt-[-3px]">
         <Tooltip title="Help">
           <QuestionCircleOutlined className="text-base leading-10" />
         </Tooltip>
       </div>
       <Dropdown menu={{ items: notificationItems }} trigger="click">
-        <div className="h-6 mx-2">
+        <div className="mx-2 mt-[-3px]">
           <Tooltip title="Notifications">
             <BellOutlined className="text-base leading-10" />
           </Tooltip>
