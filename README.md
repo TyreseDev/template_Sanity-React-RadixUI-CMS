@@ -1,5 +1,5 @@
-## JavaScript and Ant Design, TailwindCSS: [javascript branch](https://github.com/Tyrese-FullStackGenius/Sanity-React-Simple-CMS/tree/javascript)
+## The current main branch is the same as typescript.
 
-## TypeScript and RadixUI, TailwindCSS: [typescript branch](https://github.com/Tyrese-FullStackGenius/Sanity-React-Simple-CMS/tree/typescript)
+### JavaScript and Ant Design, TailwindCSS: [javascript branch](https://github.com/Tyrese-FullStackGenius/Sanity-React-Simple-CMS/tree/javascript)
 
-## main branch: same with typescript
+### TypeScript and RadixUI, TailwindCSS: [typescript branch](https://github.com/Tyrese-FullStackGenius/Sanity-React-Simple-CMS/tree/typescript)
