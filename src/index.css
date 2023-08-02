@@ -7,7 +7,6 @@ body {
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
 }
 
 code {
@@ -18,4 +17,9 @@ code {
 #root {
   width: 100vw;
   height: 100vh;
+  min-width: 1024px;
+}
+
+.button-height-30px {
+  line-height: 30px !important;
 }
