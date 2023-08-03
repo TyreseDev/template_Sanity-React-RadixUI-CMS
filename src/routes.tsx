@@ -10,11 +10,6 @@ import Users from "./pages/users";
 
 const router = [
   {
-    path: "*",
-    element: <Navigate to="/overview" replace />,
-  },
-  {
-    path: "/",
     element: <MainLayout />,
     children: [
       {
@@ -50,6 +45,10 @@ const router = [
         element: <Users />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Navigate to="/overview" replace />,
   },
 ];
 
