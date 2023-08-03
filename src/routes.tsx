@@ -10,14 +10,10 @@ import Users from "./pages/users";
 
 const router = [
   {
-    path: "*",
-    element: <Navigate to="/overview" replace />,
-  },
-  {
-    path: "/",
     element: <MainLayout />,
     children: [
       {
+        index: true,
         path: "/overview",
         element: <Overview />,
         loader: async () => {
@@ -34,22 +30,30 @@ const router = [
         },
       },
       {
+        index: true,
         path: "/tasks",
         element: <Tasks />,
       },
       {
+        index: true,
         path: "/projects",
         element: <Projects />,
       },
       {
+        index: true,
         path: "/payments",
         element: <Payments />,
       },
       {
+        index: true,
         path: "/users",
         element: <Users />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Navigate to="/overview" replace />,
   },
 ];
 
