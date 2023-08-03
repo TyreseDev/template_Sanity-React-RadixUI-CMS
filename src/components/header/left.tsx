@@ -15,7 +15,7 @@ const HeaderLeftComponent: React.FC = () => (
     <div className="h-10 w-1 border-r-2 border-gray-200 mx-2" />
     <DropDownComponent
       triggerButton={
-        <h3 className="h-6 leading-6 flex my-2 text-sm">
+        <h3 className="h-6 leading-6 flex my-2 text-[#1B1B18]">
           <img
             src="/assets/img/avatar.svg"
             alt="avatar"
@@ -23,13 +23,13 @@ const HeaderLeftComponent: React.FC = () => (
           />
           Teqqed
           <div className="mx-2">
-            <CaretUpIcon className="mt-[2px]" />
-            <CaretDownIcon className="mt-[-10px]" />
+            <CaretUpIcon className="mt-[2px] text-[#1B1B18]" />
+            <CaretDownIcon className="mt-[-10px] text-[#1B1B18]" />
           </div>
         </h3>
       }
       items={[
-        <h3 className="h-6 leading-6 flex text-sm">
+        <h3 className="h-6 leading-6 flex text-[#1B1B18]">
           <img
             src="/assets/img/avatar.svg"
             alt="avatar"
@@ -37,7 +37,7 @@ const HeaderLeftComponent: React.FC = () => (
           />
           Teqqed
         </h3>,
-        <h3 className="h-6 leading-6 flex text-sm">
+        <h3 className="h-6 leading-6 flex text-[#1B1B18]">
           <img
             src="/assets/img/avatar.svg"
             alt="avatar"

@@ -15,7 +15,7 @@ const DropDownComponent: React.FC<DropDownComponentProps> = ({
       {triggerButton}
     </DropdownMenu.Trigger>
     <DropdownMenu.Portal>
-      <DropdownMenu.Content className="bg-white shadow-2xl p-2 rounded-md">
+      <DropdownMenu.Content className="bg-white shadow-2xl p-2 rounded-lg">
         {items.map((item: React.ReactNode, oid: number) => (
           <DropdownMenu.Item
             key={oid}
