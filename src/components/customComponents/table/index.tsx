@@ -1,6 +1,7 @@
 import React from "react";
 import { TriangleDownIcon, TriangleUpIcon } from "@radix-ui/react-icons";
 import { Column, TableRowData } from "./type";
+import CheckboxComponent from "../checkbox";
 
 type TableComponentProps = {
   selectedRowKeys: number[];
@@ -25,21 +26,20 @@ const TableComponent: React.FC<TableComponentProps> = ({
     <thead className="w-full">
       <tr>
         <th className="text-left px-2 py-4 w-2 pl-6">
-          <input
-            type="checkbox"
+          <CheckboxComponent
             checked={
               selectedRowKeys.length === dataSource.length &&
               selectedRowKeys.length !== 0
             }
-            aria-checked={
+            setChecked={(e) => {
+              if (e)
+                onSelectChange(dataSource.map((row: TableRowData) => row.key));
+              else if (!e) onSelectChange([]);
+            }}
+            immediate={
               selectedRowKeys.length > 0 &&
               selectedRowKeys.length < dataSource.length
             }
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              if (e.target.checked)
-                onSelectChange(dataSource.map((row: TableRowData) => row.key));
-              else if (!e.target.checked) onSelectChange([]);
-            }}
           />
         </th>
         {columns.map((column: Column, columnId: number) => (
@@ -105,13 +105,11 @@ const TableComponent: React.FC<TableComponentProps> = ({
           }`}
         >
           <td className="text-left px-2 py-4 pl-6">
-            <input
-              type="checkbox"
+            <CheckboxComponent
               checked={selectedRowKeys.includes(row.key)}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                if (e.target.checked)
-                  onSelectChange([...selectedRowKeys, row.key]);
-                else if (!e.target.checked)
+              setChecked={(e) => {
+                if (e) onSelectChange([...selectedRowKeys, row.key]);
+                else if (!e)
                   onSelectChange(
                     selectedRowKeys.filter((key: number) => key !== row.key)
                   );
