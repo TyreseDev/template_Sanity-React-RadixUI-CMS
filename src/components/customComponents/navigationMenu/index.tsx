@@ -20,9 +20,8 @@ const NavigationMenuComponent: React.FC<NavigationMenuComponentProps> = ({
         <NavigationMenu.Item
           className={
             (selected === item.href
-              ? "border-b-2 border-black"
-              : "border-0 text-[#A3A3A3]") +
-            " h-9 leading-9 px-2 mt-[2px] text-sm"
+              ? "border-b-2 border-[#1B1B18] text-[#1B1B18]"
+              : "border-0 text-[#A3A3A3]") + " h-9 leading-9 px-2 mt-[2px]"
           }
           key={item.href}
         >

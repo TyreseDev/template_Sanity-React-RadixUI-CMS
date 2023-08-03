@@ -18,7 +18,7 @@ const TooltipComponent: React.FC<TooltipComponentPropsType> = ({
       <Tooltip.Portal>
         <Tooltip.Content
           sideOffset={5}
-          className="bg-gray-200 shadow-2xl p-2 rounded-md text-sm"
+          className="bg-gray-200 shadow-2xl p-2 rounded-lg"
         >
           {content}
           <Tooltip.Arrow className="fill-gray-200" />

@@ -49,11 +49,11 @@ const TableComponent: React.FC<TableComponentProps> = ({
               columnId === columns.length - 1 && "pr-6"
             }`}
           >
-            <p className="flex text-xs text-[#A3A3A3]">
+            <p className="flex text-[10px] font-normal text-[#A3A3A3]">
               {column.title}
               {column.sorter && (
                 <span
-                  className="mx-2"
+                  className="mx-2 cursor-pointer"
                   onClick={() => {
                     if (sortSelect[0] !== column.dataIndex)
                       setSortSelect([
@@ -72,19 +72,19 @@ const TableComponent: React.FC<TableComponentProps> = ({
                   }}
                 >
                   <TriangleUpIcon
-                    className={`mt-[-2.5px] hover:text-[#A3A3A3] ${
+                    className={`mt-[-2.5px] w-3 text-[#A3A3A3] hover:opacity-80 ${
                       sortSelect[0] === column.dataIndex &&
                       sortSelect[1] === "ascending"
-                        ? "text-[#636363]"
-                        : "text-[#C3C3C3]"
+                        ? "opacity-100"
+                        : "opacity-50"
                     }`}
                   />
                   <TriangleDownIcon
-                    className={`mt-[-10px] hover:text-[#A3A3A3] ${
+                    className={`mt-[-10px] w-3 text-[#A3A3A3] hover:opacity-80 ${
                       sortSelect[0] === column.dataIndex &&
                       sortSelect[1] === "descending"
-                        ? "text-[#636363]"
-                        : "text-[#C3C3C3]"
+                        ? "opacity-100"
+                        : "opacity-50"
                     }`}
                   />
                 </span>
