@@ -30,7 +30,7 @@ const Overview: React.FC = () => {
   }, [searchKeyWord, setTableData]);
 
   return (
-    <div className="w-[910px] my-20 mx-auto">
+    <div className="w-[910px] my-20 mx-auto rounded-md">
       <h1 className="text-4xl	font-bold mb-2">Contractors</h1>
       <h5 className="text-sm text-[#A3A3A3]">
         Lorem ipsum dolor sit amet consectetur. Lacus semper convallis non et

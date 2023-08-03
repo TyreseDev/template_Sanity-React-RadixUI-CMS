@@ -7,7 +7,7 @@ const HeaderLeftComponent: React.FC = () => (
   <div className="flex">
     <Link to="/">
       <img
-        src="/assets/img/logo.png"
+        src="/assets/img/logo.svg"
         alt="logo"
         className="w-6 h-6 m-2 cursor-pointer"
       />
@@ -17,7 +17,7 @@ const HeaderLeftComponent: React.FC = () => (
       triggerButton={
         <h3 className="h-6 leading-6 flex my-2 text-sm">
           <img
-            src="/assets/img/avatar.png"
+            src="/assets/img/avatar.svg"
             alt="avatar"
             className="w-6 h-6 mx-2"
           />
@@ -31,7 +31,7 @@ const HeaderLeftComponent: React.FC = () => (
       items={[
         <h3 className="h-6 leading-6 flex text-sm">
           <img
-            src="/assets/img/avatar.png"
+            src="/assets/img/avatar.svg"
             alt="avatar"
             className="w-6 h-6 mx-2"
           />
@@ -39,7 +39,7 @@ const HeaderLeftComponent: React.FC = () => (
         </h3>,
         <h3 className="h-6 leading-6 flex text-sm">
           <img
-            src="/assets/img/avatar.png"
+            src="/assets/img/avatar.svg"
             alt="avatar"
             className="w-6 h-6 mx-2"
           />

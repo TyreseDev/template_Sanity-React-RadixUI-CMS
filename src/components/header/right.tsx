@@ -46,7 +46,7 @@ const HeaderRightComponent: React.FC = () => (
     <DropDownComponent
       triggerButton={
         <img
-          src="/assets/img/avatar.png"
+          src="/assets/img/avatar.svg"
           alt="avatar"
           className="h-8 my-1 mx-2"
         />
