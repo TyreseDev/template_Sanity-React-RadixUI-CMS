@@ -6,6 +6,11 @@ type DropDownComponentProps = {
   items: React.ReactNode[];
 };
 
+const defaultProps: DropDownComponentProps = {
+  triggerButton: null,
+  items: [],
+};
+
 const DropDownComponent: React.FC<DropDownComponentProps> = ({
   triggerButton,
   items,
@@ -29,4 +34,5 @@ const DropDownComponent: React.FC<DropDownComponentProps> = ({
   </DropdownMenu.Root>
 );
 
+DropDownComponent.defaultProps = defaultProps;
 export default DropDownComponent;

@@ -6,6 +6,11 @@ type TooltipComponentPropsType = {
   content: React.ReactNode;
 };
 
+const defaultProps: TooltipComponentPropsType = {
+  triggerButton: null,
+  content: null,
+};
+
 const TooltipComponent: React.FC<TooltipComponentPropsType> = ({
   triggerButton,
   content,
@@ -28,4 +33,5 @@ const TooltipComponent: React.FC<TooltipComponentPropsType> = ({
   </Tooltip.Provider>
 );
 
+TooltipComponent.defaultProps = defaultProps;
 export default TooltipComponent;

@@ -10,6 +10,11 @@ type NavigationMenuComponentProps = {
   selected: string;
 };
 
+const defaultProps: NavigationMenuComponentProps = {
+  items: [],
+  selected: "",
+};
+
 const NavigationMenuComponent: React.FC<NavigationMenuComponentProps> = ({
   items,
   selected,
@@ -32,11 +37,11 @@ const NavigationMenuComponent: React.FC<NavigationMenuComponentProps> = ({
         <div className="Arrow" />
       </NavigationMenu.Indicator>
     </NavigationMenu.List>
-
     <div className="ViewportPosition">
       <NavigationMenu.Viewport className="NavigationMenuViewport" />
     </div>
   </NavigationMenu.Root>
 );
 
+NavigationMenuComponent.defaultProps = defaultProps;
 export default NavigationMenuComponent;

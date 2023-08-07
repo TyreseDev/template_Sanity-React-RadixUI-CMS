@@ -14,6 +14,15 @@ type TableComponentProps = {
   dataSource: TableRowData[];
 };
 
+const defaultProps: TableComponentProps = {
+  selectedRowKeys: [],
+  onSelectChange: () => {},
+  setSortSelect: () => {},
+  sortSelect: ["", "", () => 0],
+  columns: [],
+  dataSource: [],
+};
+
 const TableComponent: React.FC<TableComponentProps> = ({
   selectedRowKeys,
   onSelectChange,
@@ -101,7 +110,7 @@ const TableComponent: React.FC<TableComponentProps> = ({
           className={`${
             selectedRowKeys?.includes(row.key)
               ? "bg-[#377FE9] hover:opacity-90 text-white"
-              : "hover:bg-[#F9F9F8]"
+              : "hover:bg-[#F9F9F8] text-[#1B1B18]"
           }`}
         >
           <td className="text-left px-2 py-4 pl-6">
@@ -138,4 +147,5 @@ const TableComponent: React.FC<TableComponentProps> = ({
   </table>
 );
 
+TableComponent.defaultProps = defaultProps;
 export default TableComponent;

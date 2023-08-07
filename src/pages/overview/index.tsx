@@ -94,7 +94,7 @@ const Overview: React.FC = () => {
           >
             {a[0]}
           </button>
-          <span className="text-[#1B1B18]">{a}</span>
+          <span>{a}</span>
         </div>
       ),
     },
@@ -156,7 +156,7 @@ const Overview: React.FC = () => {
         compare: (a: TableRowData, b: TableRowData) => b.rate - a.rate,
       },
       render: (a: number) => (
-        <span className="text-[#1B1B18]">
+        <span>
           ${" "}
           {a.toLocaleString(["nl"], {
             minimumFractionDigits: 2,
@@ -172,9 +172,7 @@ const Overview: React.FC = () => {
         compare: (a: TableRowData, b: TableRowData) =>
           b.availability.toString().localeCompare(a.availability.toString()),
       },
-      render: (a: boolean) => (
-        <span className="text-[#1B1B18]">{a ? "Yes" : "No"}</span>
-      ),
+      render: (a: boolean) => <span>{a ? "Yes" : "No"}</span>,
     },
   ];
 

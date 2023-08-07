@@ -8,6 +8,13 @@ type CheckboxComponentProps = {
   label?: React.ReactNode;
 };
 
+const defaultProps: CheckboxComponentProps = {
+  checked: false,
+  setChecked: () => {},
+  immediate: false,
+  label: null,
+};
+
 const CheckboxComponent: React.FC<CheckboxComponentProps> = ({
   checked,
   setChecked,
@@ -20,15 +27,16 @@ const CheckboxComponent: React.FC<CheckboxComponentProps> = ({
         className={`h-[15px] w-[15px] rounded text-white ${
           checked || immediate
             ? "bg-[#377FE9]"
-            : "bg-white border border-#DDDDDD"
+            : "bg-white border border-[#DDDDDD]"
         }`}
       >
         {checked && !immediate && <CheckIcon />}
         {immediate && <DotFilledIcon />}
       </div>
-      {label && label !== "" && <span className="ml-2">{label}</span>}
+      {label && <span className="ml-2">{label}</span>}
     </div>
   );
 };
 
+CheckboxComponent.defaultProps = defaultProps;
 export default CheckboxComponent;
