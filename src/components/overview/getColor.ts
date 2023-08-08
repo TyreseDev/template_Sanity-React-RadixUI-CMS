@@ -1,4 +1,4 @@
-const getColor = {
+const getColor: Record<string, string> = {
   A: "bg-[#0000ff]",
   B: "bg-[#893E3E]",
   C: "bg-[#0000ff]",
