@@ -1,26 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 #root {
   width: 100vw;
   height: 100vh;
   min-width: 1024px;
-}
-
-.button-height-30px {
-  line-height: 30px !important;
 }

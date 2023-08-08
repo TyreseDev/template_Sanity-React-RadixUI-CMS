@@ -20,7 +20,7 @@ const HeaderRightComponent: React.FC = () => (
         placeholder="Search..."
         className="pl-12 pr-16 py-2 bg-[#F9F9F8] border-0 outline-0 rounded-lg w-80 h-10"
       />
-      <button className="absolute top-1/2 right-2 transform -translate-y-1/2 w-11 h-[30px] bg-[#F1F1F1] rounded-lg button-height-30px hover:bg-gray-200">
+      <button className="absolute top-1/2 right-2 transform -translate-y-1/2 w-11 h-[30px] bg-[#F1F1F1] rounded-lg hover:bg-gray-200 leading-[30px]">
         <span>⌘ K</span>
       </button>
     </div>

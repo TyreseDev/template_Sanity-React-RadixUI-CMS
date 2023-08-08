@@ -1,5 +1,12 @@
 import React from "react";
-import * as Tooltip from "@radix-ui/react-tooltip";
+import {
+  Provider,
+  Root,
+  Trigger,
+  Portal,
+  Content,
+  Arrow,
+} from "@radix-ui/react-tooltip";
 
 type TooltipComponentPropsType = {
   triggerButton: React.ReactNode;
@@ -15,22 +22,22 @@ const TooltipComponent: React.FC<TooltipComponentPropsType> = ({
   triggerButton,
   content,
 }) => (
-  <Tooltip.Provider>
-    <Tooltip.Root>
-      <Tooltip.Trigger asChild className="outline-0">
+  <Provider>
+    <Root>
+      <Trigger asChild className="outline-0">
         {triggerButton}
-      </Tooltip.Trigger>
-      <Tooltip.Portal>
-        <Tooltip.Content
+      </Trigger>
+      <Portal>
+        <Content
           sideOffset={5}
           className="bg-gray-200 shadow-2xl p-2 rounded-lg"
         >
           {content}
-          <Tooltip.Arrow className="fill-gray-200" />
-        </Tooltip.Content>
-      </Tooltip.Portal>
-    </Tooltip.Root>
-  </Tooltip.Provider>
+          <Arrow className="fill-gray-200" />
+        </Content>
+      </Portal>
+    </Root>
+  </Provider>
 );
 
 TooltipComponent.defaultProps = defaultProps;
