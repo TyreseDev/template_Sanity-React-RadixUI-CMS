@@ -11,8 +11,10 @@ export type TableRowData = {
 export type Column = {
   dataIndex: string;
   title: string;
-  sorter?: {
-    compare: (a: TableRowData, b: TableRowData) => number;
-  };
-  render?: (a: any, b: TableRowData, c: boolean) => React.ReactNode;
+  sorter?: (a: TableRowData, b: TableRowData) => number;
+  render?: (
+    col: any,
+    row: TableRowData,
+    isSelected: boolean
+  ) => React.ReactNode;
 };

@@ -1,7 +1,6 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
-import MainLayout from "./layouts/main";
-import { client } from "./client";
+import MainLayout from "./layouts/mainLayout";
+import sanityClient from "./helpers/client";
 import Overview from "./pages/overview";
 import Tasks from "./pages/tasks";
 import Projects from "./pages/projects";
@@ -25,7 +24,10 @@ const router = [
             rate,
             availability
           }`;
-          return client.fetch(query);
+          return sanityClient
+            .fetch(query)
+            .then((data) => data)
+            .catch((err) => []);
         },
       },
       {
